@@ -1,0 +1,245 @@
+.product-detail {
+  padding: 40px 0;
+  min-height: 60vh;
+}
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.product-image-large {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.product-image-large img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.breadcrumb a {
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.product-details-section h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.botanical-name {
+  font-size: 18px;
+  color: var(--text-light);
+  font-style: italic;
+  margin: -16px 0 0 0;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.stock {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stock.in-stock {
+  background-color: var(--secondary-green);
+  color: var(--dark-green);
+}
+
+.stock.out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-medium);
+}
+
+.care-info {
+  background-color: var(--beige);
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.care-info h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.care-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.care-label {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.care-value {
+  font-size: 15px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.purchase-section {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.quantity-selector {
+  flex: 0 0 140px;
+}
+
+.quantity-selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.quantity-controls {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.quantity-controls button {
+  width: 40px;
+  height: 48px;
+  border: none;
+  background-color: var(--beige);
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.quantity-controls button:hover:not(:disabled) {
+  background-color: var(--border-color);
+}
+
+.quantity-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.quantity-controls input {
+  flex: 1;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  height: 48px;
+}
+
+.add-to-cart-btn {
+  flex: 1;
+  height: 48px;
+  font-size: 16px;
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: var(--secondary-green);
+  color: var(--dark-green);
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 968px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .care-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    padding: 24px 0;
+  }
+
+  .product-details-section h1 {
+    font-size: 28px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .purchase-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quantity-selector {
+    flex: 1;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+  }
+}
